@@ -2,7 +2,7 @@ const app = document.querySelector('.app');
 const todoHeading = document.querySelector('.todo__heading'); 
 const todoHeadingInput = document.querySelector('.todo__heading__input'); 
 const todoHeadingAdd = document.querySelector('.todo__heading__add'); 
-
+todoHeadingInput.focus(); 
 var todo = document.querySelector('.todo'); 
 function add(input) 
 {

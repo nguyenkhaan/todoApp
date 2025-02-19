@@ -11,159 +11,165 @@
     --yellow-status: #FFB22C; 
     --green-status: #5CB338;
 }
-body {
-    width: 100%; 
-    height: 100%; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9) , rgba(0,0,0,0.5) , rgba(0,0,0,0.9)) , url(https://plus.unsplash.com/premium_vector-1711987786379-aeea5e7e935e?q=80&w=1982&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); 
-    background-repeat: no-repeat;
-    background-size: cover; 
-}
-html {
-    font-size: 62.5%; 
-    width: 100%; 
-    height: 100%; 
-    font-family: sans-serif;
-}
-.app {
-    width: 32%;
-    height: 41%; 
-    margin: auto; 
-}
-.todo__heading {
-    height: 20%; 
-    width: 100%; 
-    padding: 18px 18px;  
-    border-bottom: solid 1.5px var(--border-color); 
-    padding-bottom: 10px; 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #fff; 
-    box-shadow: 0px 0px 7px var(--white-color);
-}
-.heading-wrap {
-    display: flex; 
-    height: 100%; 
-    justify-content: space-between;
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
-    align-items: center;
-}
-.todo__heading__input {
-    background-color: transparent;
-    width: 70%; 
-    border: none; 
-    outline: none;
-    font-size: 1.6rem; 
-    text-overflow: ellipsis;
-}
-.todo__heading__add {
-    height: calc(100% + 6px); 
-    width: 15%; 
-    margin-top: 1px; 
-    font-size: 1.5rem; 
-    display: block; 
-    border-radius: 8px;
-    background-color: var(--button-color);
-    border: none; 
-    font-weight: 700;
-    color: var(--white-color); 
-    line-height: 1.5rem;
-    transition: opacity 0.3s ease; 
-}
-.todo__heading__add:hover {
-    opacity: 0.8; 
-}
-.todo {
+@media (min-width: 950px) {
+    body {
+        width: 100%; 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        background: linear-gradient(to bottom, rgba(0,0,0,0.9) , rgba(0,0,0,0.5) , rgba(0,0,0,0.9)) , url(https://plus.unsplash.com/premium_vector-1711987786379-aeea5e7e935e?q=80&w=1982&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); 
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
+    html {
+        font-size: 62.5%; 
+        width: 100%; 
+        height: 100%; 
+        font-family: sans-serif;
+    }
+    .app {
+        width: 32%;
+        height: 41%; 
+        margin: auto; 
+    }
+    .todo__heading {
+        height: 20%; 
+        width: 100%; 
+        padding: 18px 18px;  
+        border-bottom: solid 1.5px var(--border-color); 
+        padding-bottom: 10px; 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #fff; 
+        box-shadow: 0px 0px 7px var(--white-color);
+    }
+    .heading-wrap {
+        display: flex; 
+        height: 100%; 
+        justify-content: space-between;
+        width: 100%; 
+        margin: 0; 
+        padding: 0; 
+        align-items: center;
+    }
+    .todo__heading__input {
+        background-color: transparent;
+        width: 70%; 
+        border: none; 
+        outline: none;
+        font-size: 1.6rem; 
+        text-overflow: ellipsis;
+    }
+    .todo__heading__add {
+        height: calc(100% + 6px); 
+        width: 15%; 
+        margin-top: 1px; 
+        font-size: 180%; 
+        border-radius: 8px;
+        background-color: var(--button-color);
+        color: var(--button-color); 
+        border: none; 
+        font-weight: 700;
+        color: var(--white-color); 
+        line-height: 1.5rem;
+        transition: opacity 0.3s ease; 
+        text-align: center;
+        overflow: hidden;
+    }
+    .todo__heading__add:hover {
+        opacity: 0.8; 
+    }
+    .todo {
+        
+        margin: 0; 
+        padding-left: 0; 
+        list-style-type: none;
+        border-top: 0.5px solid var(--border-color); 
+        padding: 18px 0px; 
+        padding-top: 0px; 
+    }
     
-    margin: 0; 
-    padding-left: 0; 
-    list-style-type: none;
-    border-top: 0.5px solid var(--border-color); 
-    padding: 18px 0px; 
-    padding-top: 0px; 
-}
-
-.todo__list {
-    width: 100%;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    height: 80%; 
-    padding: 16px 18px; 
-    border-bottom: 1px solid var(--border-color);
-    background-color: #fff; 
-    box-shadow: 0px 0px 2px var(--white-color);
-    cursor: pointer;
-    line-height: 1.6rem;
+    .todo__list {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        height: 80%; 
+        padding: 16px 18px; 
+        border-bottom: 1px solid var(--border-color);
+        background-color: #fff; 
+        box-shadow: 0px 0px 2px var(--white-color);
+        cursor: pointer;
+        line-height: 1.6rem;
+        
+    }
+    .todo li:last-child 
+    {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom: none; 
+    }
+    .todo__info__wrap 
+    {
+        width: 70%; 
+        height: 100%; 
+    }
+    .todo__list__info {
+        font-size: 1.5rem; 
+        display: block; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        height: 100%; 
+    }
+    .todo__list__icon {
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+        line-height: 2rem; 
+    }
+    .todo__list__rubbish {
+        font-size: 1.6rem; 
+        color: var(--text-color); 
+        transition: transform 0.3s linear;
+        margin-left: 3px; 
+    }
+    .todo__list__rubbish:hover {
+        transform: translateY(-2.5px); 
+        color: #E52020; 
+    }
+    .icon__status {
+        margin: 0 3px; 
+        font-size: 1.4rem; 
+        transition: transform 0.2s linear; 
+    }
+    .icon__status:hover {
+        transform: translateY(-3px);  
+    }
+    /*-------------------------CLASS BO SUNG------------------------*/ 
+    .uncomplete span {
+        cursor: default;
+        text-decoration: line-through; 
+        color: var(--line-text-color); 
+        text-decoration-thickness: 1.2px;
+    }
+    .uncomplete {
+        cursor: default;
+        color: var(--line-text-color); 
+    }
+    .lost--color {
+        color: #333 !important; /*do cai kia la inline nen co do uu tien cao hon  */ 
+        opacity: 0.8;
+        cursor: default; 
+    } 
+    li.icon--red {
+        background-color: var(--red-status); 
+    }
+    li.icon--yellow {
+        background-color: var(--yellow-status); 
     
-}
-.todo li:last-child 
-{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom: none; 
-}
-.todo__info__wrap 
-{
-    width: 70%; 
-    height: 100%; 
-}
-.todo__list__info {
-    font-size: 1.5rem; 
-    display: block; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-    height: 100%; 
-}
-.todo__list__icon {
-    display: flex;
-    align-items: center; 
-    flex-wrap: wrap;
-    line-height: 2rem; 
-}
-.todo__list__rubbish {
-    font-size: 1.6rem; 
-    color: var(--text-color); 
-    transition: transform 0.3s linear;
-    margin-left: 3px; 
-}
-.todo__list__rubbish:hover {
-    transform: translateY(-2.5px); 
-    color: #E52020; 
-}
-.icon__status {
-    margin: 0 3px; 
-    font-size: 1.4rem; 
-    transition: transform 0.2s linear; 
-}
-.icon__status:hover {
-    transform: translateY(-3px);  
-}
-/*-------------------------CLASS BO SUNG------------------------*/ 
-.uncomplete span {
-    cursor: default;
-    text-decoration: line-through; 
-    color: var(--line-text-color); 
-    text-decoration-thickness: 1.2px;
-}
-.uncomplete {
-    cursor: default;
-    color: var(--line-text-color); 
-}
-.lost--color {
-    color: #333 !important; /*do cai kia la inline nen co do uu tien cao hon  */ 
-}
-li.icon--red {
-    background-color: var(--red-status); 
-}
-li.icon--yellow {
-    background-color: var(--yellow-status); 
-
-}
-li.icon--green {
-    background-color: var(--green-status); 
+    }
+    li.icon--green {
+        background-color: var(--green-status); 
+    }
 }
