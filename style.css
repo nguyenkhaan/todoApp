@@ -7,6 +7,9 @@
     --button-color: #5CB338; 
     --text-color: #33372C; 
     --line-text-color: #9DB2BF; 
+    --red-status: #B82132;
+    --yellow-status: #FFB22C; 
+    --green-status: #5CB338;
 }
 body {
     width: 100%; 
@@ -69,6 +72,10 @@ html {
     font-weight: 700;
     color: var(--white-color); 
     line-height: 1.5rem;
+    transition: opacity 0.3s ease; 
+}
+.todo__heading__add:hover {
+    opacity: 0.8; 
 }
 .todo {
     
@@ -89,7 +96,7 @@ html {
     padding: 16px 18px; 
     border-bottom: 1px solid var(--border-color);
     background-color: #fff; 
-    box-shadow: 0px 0px 7px var(--white-color);
+    box-shadow: 0px 0px 2px var(--white-color);
     cursor: pointer;
     line-height: 1.6rem;
     
@@ -100,18 +107,41 @@ html {
     border-bottom-right-radius: 10px;
     border-bottom: none; 
 }
-.todo__list__info {
-    font-size: 1.6rem; 
-
+.todo__info__wrap 
+{
+    width: 70%; 
+    height: 100%; 
 }
-.todo__list i {
+.todo__list__info {
+    font-size: 1.5rem; 
+    display: block; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    height: 100%; 
+}
+.todo__list__icon {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+    line-height: 2rem; 
+}
+.todo__list__rubbish {
     font-size: 1.6rem; 
     color: var(--text-color); 
     transition: transform 0.3s linear;
+    margin-left: 3px; 
 }
-.todo__list i:hover {
+.todo__list__rubbish:hover {
     transform: translateY(-2.5px); 
     color: #E52020; 
+}
+.icon__status {
+    margin: 0 3px; 
+    font-size: 1.4rem; 
+    transition: transform 0.2s linear; 
+}
+.icon__status:hover {
+    transform: translateY(-3px);  
 }
 /*-------------------------CLASS BO SUNG------------------------*/ 
 .uncomplete span {
@@ -120,7 +150,20 @@ html {
     color: var(--line-text-color); 
     text-decoration-thickness: 1.2px;
 }
-.uncomplete i {
+.uncomplete {
     cursor: default;
     color: var(--line-text-color); 
+}
+.lost--color {
+    color: #333 !important; /*do cai kia la inline nen co do uu tien cao hon  */ 
+}
+li.icon--red {
+    background-color: var(--red-status); 
+}
+li.icon--yellow {
+    background-color: var(--yellow-status); 
+
+}
+li.icon--green {
+    background-color: var(--green-status); 
 }
